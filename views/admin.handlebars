@@ -1,0 +1,55 @@
+<section class="admin-section">
+
+    <h1>
+        Booking Dashboard
+    </h1>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Client</th>
+                <th>Service</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            {{#each bookings}}
+
+                <tr>
+
+                    <td>
+                        {{client_name}}
+                    </td>
+
+                    <td>
+                        {{service_name}}
+                    </td>
+
+                    <td>
+                        {{booking_date}}
+                    </td>
+
+                    <td>
+                        {{booking_time}}
+                    </td>
+
+                    <td>
+                        {{status}}
+                    </td>
+
+                </tr>
+
+            {{/each}}
+
+        </tbody>
+
+    </table>
+
+</section>

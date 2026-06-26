@@ -1,6 +1,6 @@
 import db from '../config/database.js';
 
-export async function createBooking(data) {
+async function createBooking(data) {
 
     return db.none(
         `
@@ -27,7 +27,7 @@ export async function createBooking(data) {
     );
 }
 
-export async function getBookings() {
+async function getBookings() {
 
     return await db.any(`
         SELECT
@@ -42,7 +42,7 @@ export async function getBookings() {
     `);
 }
 
-export async function updateBookingStatus(bookingId, status) {
+async function updateBookingStatus(bookingId, status) {
 
     return db.none(
         `
@@ -54,10 +54,18 @@ export async function updateBookingStatus(bookingId, status) {
     );
 }
 
-export async function getBookingByName(client_name){
+async function getBookingByName(client_name){
     return await db.manyOrNone(`SELECT * FROM bookings WHERE client_name=$1`, [client_name]);
 }
 
-export async function getBookingByNumber(client_number){
+async function getBookingByNumber(client_number){
     return await db.manyOrNone(`SELECT * FROM bookings WHERE phone_number=$1`, [client_number]);
+}
+
+export default {
+    createBooking,
+    getBookings,
+    updateBookingStatus,
+    getBookingByName,
+    getBookingByNumber
 }

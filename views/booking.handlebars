@@ -1,0 +1,72 @@
+<section class="booking-section">
+
+    <h1>
+        Book Your Appointment
+    </h1>
+
+    <form
+        action="/bookings"
+        method="POST"
+        class="booking-form"
+    >
+
+        <input
+            type="text"
+            name="client_name"
+            placeholder="Full Name"
+            required
+        >
+
+        <input
+            type="text"
+            name="phone_number"
+            placeholder="Phone Number"
+            required
+        >
+
+        <select
+            name="service_id"
+            required
+        >
+
+            <option value="" disabled>
+                Select Service
+            </option>
+
+            {{#each services}}
+
+                <option
+                    value="{{service_id}}"
+                >
+                    {{service_name}}
+                    - R{{price}}
+                </option>
+
+            {{/each}}
+
+        </select>
+
+        <input
+            type="date"
+            name="booking_date"
+            required
+        >
+
+        <input
+            type="time"
+            name="booking_time"
+            required
+        >
+
+        <textarea
+            name="notes"
+            placeholder="Additional notes"
+        ></textarea>
+
+        <button type="submit">
+            Confirm Booking
+        </button>
+
+    </form>
+
+</section>

@@ -1,29 +1,27 @@
-import * as BookingModel from '../models/booking.model.js';
+import BookingModel from '../models/booking.model.js';
 import { sendBookingConfirmation } from './notification.service.js';
 
-export async function createBooking(data) {
+async function createBooking(data) {
 
     await BookingModel.createBooking(data);
 
     await sendBookingConfirmation(data);
 }
 
-export async function getBookings() {
+async function getBookings() {
 
     return BookingModel.getBookings();
 }
 
-export async function bookingByName(name) {
+async function bookingByName(name) {
     return BookingModel.getBookingByName(name);
 }
 
-export async function bookingByNumber(number) {
+async function bookingByNumber(number) {
     return BookingModel.getBookingByNumber(number);
 }
 
-export async function confirmBooking(
-    bookingId
-) {
+async function confirmBooking(bookingId) {
 
     return BookingModel.updateBookingStatus(
         bookingId,
@@ -31,12 +29,19 @@ export async function confirmBooking(
     );
 }
 
-export async function cancelBooking(
-    bookingId
-) {
+async function cancelBooking(bookingId) {
 
     return BookingModel.updateBookingStatus(
         bookingId,
         'Cancelled'
     );
+}
+
+export default {
+    createBooking,
+    getBookings,
+    bookingByName,
+    bookingByNumber,
+    confirmBooking,
+    cancelBooking
 }

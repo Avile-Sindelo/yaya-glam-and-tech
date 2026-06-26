@@ -1,24 +1,20 @@
-import * as BookingService from '../services/booking.service.js';
+import BookingService from '../services/booking.service.js';
+import { getServices } from '../models/service.model.js';
 
-export function getBookingPage(
-    req,
-    res
-) {
-
-    res.render('booking');
+export async function getBookingPage(req, res) {
+    //get the services from the database and pass them to 
+    //the render method alongside the "booking" view
+    const services = await getServices();
+    
+    res.render('booking', { services });
 
 }
 
-export async function createBooking(
-    req,
-    res
-) {
+export async function createBooking(req, res) {
 
     try {
-
-        await BookingService.createBooking(
-            req.body
-        );
+  
+        await BookingService.createBooking(req.body);
 
         res.redirect('/');
 
@@ -26,9 +22,7 @@ export async function createBooking(
 
         console.error(error);
 
-        res.status(500).send(
-            'Unable to create booking'
-        );
+        res.status(500).send('Unable to create booking');
 
     }
 
