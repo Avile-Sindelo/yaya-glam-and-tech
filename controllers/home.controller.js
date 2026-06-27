@@ -1,13 +1,9 @@
 import * as ServiceService
 from '../services/service.service.js';
 
-export async function getHomePage(
-    req,
-    res
-) {
+export async function getHomePage(req, res) {
 
-    const services =
-        await ServiceService.getServices();
+    const services = await ServiceService.getServices();
 
     res.render(
         'home',
