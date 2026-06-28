@@ -13,7 +13,7 @@ export async function getBookingPage(req, res) {
 export async function createBooking(req, res) {
 
     try {
-  
+        
         await BookingService.createBooking(req.body);
 
         res.redirect('/');
