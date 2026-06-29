@@ -1,7 +1,7 @@
 import db from '../config/database.js';
 
 async function createBooking(data) {
-
+    
     return db.none(
         `
         INSERT INTO bookings
