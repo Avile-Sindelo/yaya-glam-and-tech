@@ -2,6 +2,7 @@
 CREATE TABLE services (
     service_id SERIAL PRIMARY KEY,
     service_name VARCHAR(100) NOT NULL,
+    service_category VARCHAR(100) NOT NULL,
     description TEXT,
     duration_minutes INTEGER NOT NULL,
     price NUMERIC(10,2) NOT NULL,

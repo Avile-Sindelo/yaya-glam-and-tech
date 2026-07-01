@@ -1,11 +1,11 @@
 import express from 'express';
 
-import { getHomePage, getServicesPage } from '../controllers/home.controller.js';
+import HomeRoutes from '../controllers/home.controller.js';
 
 const router = express.Router();
 
-router.get('/', getHomePage);
+router.get('/', HomeRoutes.getHomePage);
 
-router.get('/services', getServicesPage);
+router.get('/services', HomeRoutes.getServicesPage);
 
 export default router;

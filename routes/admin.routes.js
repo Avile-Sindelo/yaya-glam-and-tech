@@ -1,9 +1,9 @@
 import express from 'express';
 
-import { getDashboard } from '../controllers/admin.controller.js';
+import Dashboard from '../controllers/admin.controller.js';
 
 const router = express.Router();
 
-router.get('/', getDashboard);
+router.get('/', Dashboard.getDashboard);
 
 export default router;

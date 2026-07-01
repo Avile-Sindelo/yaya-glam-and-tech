@@ -1,7 +1,7 @@
 import BookingService from '../services/booking.service.js';
-import { getServices } from '../models/service.model.js';
+import  getServices from '../models/service.model.js';
 
-export async function getBookingPage(req, res) {
+async function getBookingPage(req, res) {
     //get the services from the database and pass them to 
     //the render method alongside the "booking" view
     const services = await getServices();
@@ -10,7 +10,7 @@ export async function getBookingPage(req, res) {
 
 }
 
-export async function createBooking(req, res) {
+async function createBooking(req, res) {
 
     try {
         
@@ -26,4 +26,9 @@ export async function createBooking(req, res) {
 
     }
 
+}
+
+export default {
+    getBookingPage,
+    createBooking
 }

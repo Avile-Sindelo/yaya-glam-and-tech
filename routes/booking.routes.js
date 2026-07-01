@@ -2,11 +2,11 @@ import express from 'express';
 
 import { validateBooking } from '../middleware/validation.middleware.js';
 
-import { getBookingPage, createBooking } from '../controllers/booking.controller.js';
+import Booking from '../controllers/booking.controller.js';
 
 const router = express.Router();
 
-router.get('/', getBookingPage);
-router.post('/', validateBooking, createBooking);
+router.get('/', Booking.getBookingPage);
+router.post('/', validateBooking, Booking.createBooking);
 
 export default router;

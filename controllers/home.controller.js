@@ -1,34 +1,28 @@
-import * as ServiceService
-from '../services/service.service.js';
+import ServiceService from '../services/service.service.js';
+import ServiceModel from '../models/service.model.js';
 
-export async function getHomePage(req, res) {
+async function getHomePage(req, res) {
 
     const services = await ServiceService.getServices();
 
-    res.render(
-        'home',
-        {
-            title: "Yaya's Glam and Tech",
-            services
-        }
+    res.render('home', { title: "Yaya's Glam and Tech", services}
     );
 
 }
 
-export async function getServicesPage(
-    req,
-    res
-) {
+async function getServicesPage(req, res) {
 
-    const services =
-        await ServiceService.getServices();
+    const pedicureServices = await ServiceModel.getPedicureServices();
+    const manicureServices = await ServiceModel.getManicureServices();
+    const extraServices = await ServiceModel.getExtraServices();
+    
 
-    res.render(
-        'services',
-        {
-            title: 'Our Services',
-            services
-        }
+    res.render('services', { title: 'Our Services', extraServices, pedicureServices, manicureServices }
     );
 
+}
+
+export default {
+    getHomePage,
+    getServicesPage
 }
