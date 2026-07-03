@@ -1,10 +1,10 @@
 import BookingService from '../services/booking.service.js';
-import  getServices from '../models/service.model.js';
+import  Services from '../models/service.model.js';
 
 async function getBookingPage(req, res) {
     //get the services from the database and pass them to 
     //the render method alongside the "booking" view
-    const services = await getServices();
+    const services = await Services.getServices();
     
     res.render('booking', { services });
 
