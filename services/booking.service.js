@@ -1,11 +1,13 @@
 import BookingModel from '../models/booking.model.js';
 import { sendBookingConfirmation } from './notification.service.js';
 
+
 async function createBooking(data) {
 
     await BookingModel.createBooking(data);
 
     await sendBookingConfirmation(data);
+
 }
 
 async function getBookings() {

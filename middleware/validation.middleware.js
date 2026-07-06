@@ -1,9 +1,12 @@
-export function validateBooking(req, res, next) {
+import  Services from '../models/service.model.js';
+import BookingModel from '../models/booking.model.js'
 
-    const {
+export async function validateBooking(req, res, next) {
+
+       const {
         client_name,
         phone_number,
-        service_id,
+        service_id, 
         booking_date,
         booking_time
     } = req.body;
@@ -11,12 +14,6 @@ export function validateBooking(req, res, next) {
     const nameRegex = /^[A-Za-zÀ-ÿ]+(?:[\s'-][A-Za-zÀ-ÿ]+)*$/;
 
     const phoneRegex = /^(\+?\d{1,3}[\s-]?)?(\d{2,3}[\s-]?)?\d{3}[\s-]?\d{4}$/;
-
-    const serviceRegex = /^[0-9]+$/;
-
-    const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
-
-    const timeRegex = /^([01]\d|2[0-3]):([0-5]\d)$/;
 
     const errors = [];
 
@@ -32,30 +29,49 @@ export function validateBooking(req, res, next) {
 
     }
 
-    if (!serviceRegex.test(service_id)) {
-
-        errors.push('Invalid service selected.');
-
+    
+    function validateBookingDate(bookingDate) {
+        
+        const today = new Date();
+        
+        today.setHours(0, 0, 0, 0);
+        
+        const selectedDate = new Date(bookingDate);
+    
+        selectedDate.setHours(0, 0, 0, 0);
+    
+        if (selectedDate < today) {
+    
+            errors.push('Invalid date - Make sure you do not book the Past');
+            
+        }
+    }
+    
+    async function validateAvailableSlot(bookingDate, bookingTime) {
+        
+        const booking = await BookingModel.bookingExists(bookingDate, bookingTime);
+        
+        if (booking) {
+            
+            errors.push('That slot has already been booked!');
+            
+        }
+        
     }
 
-    if (!dateRegex.test(booking_date)) {
-
-        errors.push('Invalid booking date.');
-
-    }
-
-    if (!timeRegex.test(booking_time)) {
-
-        errors.push('Invalid booking time.');
-
-    }
+    validateBookingDate(booking_date);
+    await validateAvailableSlot(booking_date, booking_time);
 
     if (errors.length > 0) {
-
-        return res.status(400).render('booking', {errors, formData: req.body});
-
+        const services = await Services.getServices();
+    
+        return res.status(500).render('booking', {errors, formData: req.body, services});
+    
     }
 
     next();
+    console.log('Errors, as per validation.middleware: ', errors);
+    return errors;
 
 }
+

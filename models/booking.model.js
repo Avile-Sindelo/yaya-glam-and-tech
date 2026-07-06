@@ -1,5 +1,23 @@
 import db from '../config/database.js';
 
+async function bookingExists(bookingDate, bookingTime) {
+
+    return db.oneOrNone(
+        `
+        SELECT booking_id
+        FROM bookings
+        WHERE booking_date = $1
+        AND booking_time = $2
+        AND status <> 'Cancelled'
+        `,
+        [
+            bookingDate,
+            bookingTime
+        ]
+    );
+
+}
+
 async function createBooking(data) {
     
     return db.none(
@@ -63,6 +81,7 @@ async function getBookingByNumber(client_number){
 }
 
 export default {
+    bookingExists,
     createBooking,
     getBookings,
     updateBookingStatus,
