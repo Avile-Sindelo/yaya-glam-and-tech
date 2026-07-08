@@ -1,6 +1,6 @@
 <section class="admin-section">
 
-    <h1>
+    <h1 id="booking-heading">
         Booking Dashboard
     </h1>
 
@@ -11,6 +11,7 @@
             <tr>
                 <th>Client</th>
                 <th>Service</th>
+                <th>Category</th>
                 <th>Date</th>
                 <th>Time</th>
                 <th>Status</th>
@@ -33,6 +34,10 @@
                     <td>
                         {{service_name}}
                     </td>
+                   
+                    <td>
+                        {{service_category}}
+                    </td>
 
                     <td>
                         {{booking_date}}
@@ -43,7 +48,7 @@
                     </td>
 
                     <td>
-                        {{status}}
+                        <a href="#" >{{status}}</a>
                     </td>
 
                 </tr>

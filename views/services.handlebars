@@ -1,23 +1,42 @@
-<section>
-    <h2> Here are our services below</h2>
-    <ol>
-        <h3>Pedicure </h3>
-        {{#each pedicureServices}}  
-            <li>{{service_name}} - {{description}} - R{{price}}</li>
-        {{/each}}
-    </ol>
-   
-    <ol>
-        <h3>Manicure </h3>
-        {{#each manicureServices}}  
-            <li>{{service_name}} - {{description}} - R{{price}}</li>
-        {{/each}}
-    </ol>
-   
-    <ol>
-        <h3>Extra services </h3>
-        {{#each extraServices}}  
-            <li>{{service_name}} - {{description}} - R{{price}}</li>
-        {{/each}}
-    </ol>
-</section>
+<h2 class="category-title">
+    💅 Manicure
+</h2>
+
+<div class="service-grid">
+
+    {{#each manicureServices}}
+
+       <div class="service-card"> <h3>{{service_name}}</h3>  <p class="descr">{{description}}</p>  <p class="price">R{{price}}</p></div>
+
+    {{/each}}
+
+</div>
+
+<h2 class="category-title">
+    🦶 Pedicure
+</h2>
+
+<div class="service-grid">
+
+    {{#each pedicureServices}}
+
+       <div class="service-card"> <h3>{{service_name}}</h3>  <p class="descr">{{description}}</p>  <p class="price">R{{price}}</p></div>
+
+
+    {{/each}}
+
+</div>
+
+<h2 class="category-title">
+    ✨ Extra Services
+</h2>
+
+<div class="service-grid">
+
+    {{#each extraServices}}
+
+        <div class="service-card"> <h3>{{service_name}}</h3>  <p class="descr">{{description}}</p>  <p class="price">R{{price}}</p></div>
+
+    {{/each}}
+
+</div>

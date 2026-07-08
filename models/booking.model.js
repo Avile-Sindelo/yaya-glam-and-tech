@@ -50,7 +50,7 @@ async function getBookings() {
     return await db.any(`
         SELECT
             b.*,
-            s.service_name
+            s.service_name, s.service_category
         FROM bookings b
         JOIN services s
             ON b.service_id = s.service_id

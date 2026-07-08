@@ -1,17 +1,11 @@
- <h4 id="error-message">{{errors}}</h4>
+ <h4 class="error-message">{{errors}}</h4>
 
 
 <section class="booking-section">
 
-    <h1>
-        Book Your Appointment
-    </h1>
 
-    <form
-        action="/bookings"
-        method="POST"
-        class="booking-form"
-    >
+    <form action="/bookings" method="POST" class="booking-form">
+        <h1>Book Your Appointment</h1>
 
         <input
             type="text"
@@ -28,7 +22,8 @@
         >
 
         <select
-            name="service_id"
+            name="service_id" 
+            id="select-service"
             required
         >
 
@@ -39,7 +34,7 @@
             {{#each services}}
 
                 <option
-                    value="{{service_id}}"
+                    value="{{service_id}}" class="option"
                 >
                     {{service_category}} : {{service_name}}
                     - R{{price}}
@@ -66,7 +61,7 @@
             placeholder="Additional notes"
         ></textarea>
 
-        <button type="submit">
+        <button type="submit" id="submit-btn">
             Confirm Booking
         </button>
 
