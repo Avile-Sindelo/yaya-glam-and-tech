@@ -1,0 +1,82 @@
+/*======================================================
+BUTTON
+======================================================*/
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:16px 38px;
+
+    border-radius:50px;
+
+    transition:var(--transition);
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+
+/*======================================================
+PRIMARY
+======================================================*/
+
+.btn-primary{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+
+/*======================================================
+SECONDARY
+======================================================*/
+
+.btn-secondary{
+
+    border:2px solid var(--gold);
+
+    color:var(--gold);
+
+    margin-left:15px;
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--gold);
+
+    color:white;
+
+}
+
+
+/*======================================================
+SMALL BUTTON
+======================================================*/
+
+.btn-small{
+
+    padding:10px 25px;
+
+    font-size:.95rem;
+
+}

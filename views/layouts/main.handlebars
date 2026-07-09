@@ -6,28 +6,32 @@
         <title>{{title}}</title>
 
         <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/animations.css">
+        <link rel="stylesheet" href="/css/base.css">
+        <link rel="stylesheet" href="/css/buttons.css">
+        <link rel="stylesheet" href="/css/cards.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <link rel="stylesheet" href="/css/gallery.css">
+        <link rel="stylesheet" href="/css/hero.css">
+        <link rel="stylesheet" href="/css/navbar.css">
+        <link rel="stylesheet" href="/css/responsive.css">
+        <link rel="stylesheet" href="/css/typography.css">
+        <link rel="stylesheet" href="/css/variables.css">
+        <link rel="stylesheet" href="/css/services-preview.css">
+        <link rel="stylesheet" href="/css/gallery-preview.css">
+        <link rel="stylesheet" href="/css/why-us.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Changa+One:ital@0;1&family=Cinzel:wght@400..900&family=Cormorant+Upright:wght@300;400;500;600;700&family=Darker+Grotesque:wght@300..900&family=Gruppo&family=Montenegrin+Gothic+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Saira+Stencil:ital,wght@0,100..900;1,100..900&family=Ultra&display=swap" rel="stylesheet">
     </head>
     <body>
-
-        <nav class="navbar">
-
-
-            <ul class="nav-links">
-                <div class="logo">
-                    Yaya's Glam & Tech
-                </div>
-                <li class="navlink-item"><a href="/">Home</a></li>
-                <li class="navlink-item"><a href="/services">Services</a></li>
-                <li class="navlink-item"><a href="/bookings">Book Now</a></li>
-            </ul>
-
-        </nav>
-
+        {{> navbar}}
         {{{body}}}
 
+        <script src="/js/navbar.js"></script>
+        <script src="/js/hero.js"></script>
+        <script src="/js/petals.js"></script>
+        <script src="/js/animations.js"></script>
+        {{!-- <script src="../../public/js/script.js"></script> --}}
     </body>
-    {{!-- <script src="../../public/js/script.js"></script> --}}
 </html>

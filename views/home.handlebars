@@ -1,77 +1,185 @@
-<section class="hero">
+{{!-- <section class="hero">
 
     <div class="hero-content">
 
+        <span class="hero-tag">
+            Luxury Nail Studio
+        </span>
+
         <h1>
-            Luxury Nails,
-            Exceptional Style
+            Beautiful Nails,
+            Beautiful Confidence
         </h1>
 
         <p>
-            Professional nail care and beauty services
-            tailored just for you.
+            Treat yourself to luxurious manicures,
+            pedicures and nail artistry that leaves
+            you feeling confident and elegant.
         </p>
 
-        <a
-            href="/bookings"
-            class="btn-primary"
+        <div class="hero-buttons">
+
+            <a
+                href="/bookings"
+                class="btn btn-primary"
+            >
+                Book Appointment
+            </a>
+
+            <a
+                href="/services"
+                class="btn btn-secondary"
+            >
+                View Services
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img
+            src="/images/hero1.jpg"
+            alt="Luxury Nails"
         >
-            Book Appointment
+
+    </div>
+
+</section>
+
+
+<section class="categories">
+
+    <h2>Our Signature Services</h2>
+
+    <p>
+        Luxury treatments designed to make you look
+        and feel your absolute best.
+    </p>
+
+    <div class="category-grid">
+
+        <a href="/services#manicure" class="category-card">
+
+            <div class="icon">💅</div>
+
+            <h3>Manicure</h3>
+
+            <p>
+                Elegant nail care and stylish finishes.
+            </p>
+
+        </a>
+
+        <a href="/services#pedicure" class="category-card">
+
+            <div class="icon">🦶</div>
+
+            <h3>Pedicure</h3>
+
+            <p>
+                Relaxing treatments for healthy,
+                beautiful feet.
+            </p>
+
+        </a>
+
+        <a href="/services#extras" class="category-card">
+
+            <div class="icon">✨</div>
+
+            <h3>Extra Services</h3>
+
+            <p>
+                Nail art, repairs and finishing touches.
+            </p>
+
         </a>
 
     </div>
 
 </section>
 
-<section class="services">
 
-    <h2>Our Services</h2>
+<section class="why-us">
 
-    <div class="service-grid">
+    <h2>Why Choose Yaya's Glam & Tech?</h2>
 
-        {{#each services}}
+    <div class="features">
 
-            <div class="service-card">
+        <div class="feature">
 
-                <h3>
-                    {{service_name}}
-                </h3>
+            <div class="feature-icon">🌸</div>
 
-                <p>
-                    {{description}}
-                </p>
+            <h3>Premium Products</h3>
 
-                <div class="service-info">
+            <p>
+                We use quality products that care for
+                your natural nails.
+            </p>
 
-                    <span>
-                        R{{price}}
-                    </span>
+        </div>
 
-                    <span>
-                        {{duration_minutes}} mins
-                    </span>
+        <div class="feature">
 
-                </div>
+            <div class="feature-icon">💖</div>
 
-            </div>
+            <h3>Professional Care</h3>
 
-        {{/each}}
+            <p>
+                Every appointment is tailored to your
+                individual style.
+            </p>
+
+        </div>
+
+        <div class="feature">
+
+            <div class="feature-icon">📅</div>
+
+            <h3>Easy Booking</h3>
+
+            <p>
+                Book your appointment online in
+                just a few clicks.
+            </p>
+
+        </div>
 
     </div>
 
 </section>
 
+
 <section class="cta">
 
     <h2>
-        Ready For Your Next Nail Appointment?
+        Ready to Feel Gorgeous?
     </h2>
+
+    <p>
+        Your next favourite manicure is only one
+        appointment away.
+    </p>
 
     <a
         href="/bookings"
-        class="btn-primary"
+        class="btn btn-primary"
     >
         Book Now
     </a>
 
-</section>
+</section> --}}
+
+{{> hero}}
+
+{{> services-preview}}
+
+{{> gallery-preview}}
+
+{{> why-us}}
+
+{{> testimonials}}
+
+{{> cta}}
