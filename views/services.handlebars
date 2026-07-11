@@ -1,42 +1,38 @@
-<h2 class="category-title">
-    💅 Manicure
-</h2>
+<div id="services-container" class="services">
+    <h2 class="category-title"> 💅 Manicure </h2>
 
-<div class="service-grid">
+    <div class="service-grid">
 
-    {{#each manicureServices}}
-
-       <div class="service-card"> <h3>{{service_name}}</h3>  <p class="descr">{{description}}</p>  <p class="price">R{{price}}</p></div>
-
-    {{/each}}
-
-</div>
-
-<h2 class="category-title">
-    🦶 Pedicure
-</h2>
-
-<div class="service-grid">
-
-    {{#each pedicureServices}}
-
-       <div class="service-card"> <h3>{{service_name}}</h3>  <p class="descr">{{description}}</p>  <p class="price">R{{price}}</p></div>
-
-
-    {{/each}}
-
-</div>
-
-<h2 class="category-title">
-    ✨ Extra Services
-</h2>
-
-<div class="service-grid">
-
-    {{#each extraServices}}
+        {{#each manicureServices}}
 
         <div class="service-card"> <h3>{{service_name}}</h3>  <p class="descr">{{description}}</p>  <p class="price">R{{price}}</p></div>
 
-    {{/each}}
+        {{/each}}
 
+    </div>
+
+    <h2 class="category-title"> 🦶 Pedicure </h2>
+
+    <div class="service-grid">
+
+        {{#each pedicureServices}}
+
+        <div class="service-card"> <h3>{{service_name}}</h3>  <p class="descr">{{description}}</p>  <p class="price">R{{price}}</p></div>
+
+
+        {{/each}}
+
+    </div>
+
+    <h2 class="category-title"> ✨ Extra Services </h2>
+
+    <div class="service-grid">
+
+        {{#each extraServices}}
+
+            <div class="service-card"> <h3>{{service_name}}</h3>  <p class="descr">{{description}}</p>  <p class="price">R{{price}}</p></div>
+
+        {{/each}}
+
+    </div>
 </div>
