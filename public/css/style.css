@@ -757,7 +757,7 @@ RESPONSIVE
     RESPONSIVE
 ========================================== */
 
-@media(max-width:768px){
+@media(max-width:560px){
 
     .booking-form{
 
@@ -771,8 +771,5 @@ RESPONSIVE
 
     }
 
-    .logo{
-        display: none;
-    }
-
 }
+
