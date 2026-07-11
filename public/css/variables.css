@@ -3,33 +3,19 @@ COLORS
 ======================================================*/
 
 :root{
-
-    --primary:#d63384;
-
-    --primary-dark:#b3286c;
-
-    --light-pink:#fff7fa;
-
-    --soft-pink:#fde8f1;
-
-    --gold:#d4af37;
-
-    --gold-light:#f3df96;
-
-    --white:#ffffff;
-
-    --black:#222;
-
-    --text:#555;
-
-    --grey:#888;
-
-    --border:#f0dce6;
-
-    --shadow:0 15px 35px rgba(0,0,0,.08);
-
-    --shadow-hover:0 20px 45px rgba(214,51,132,.18);
-
+    --primary: #d63384;
+    --primary-dark :#b3286c;
+    --light-pink: #fff7fa;
+    --soft-pink: #fde8f1;
+    --gold: #d4af37;
+    --gold-light: #f3df96;
+    --white: #ffffff;
+    --black: #222;
+    --text: #555;
+    --grey: #888;
+    --border: #f0dce6;
+    --shadow: 0 15px 35px rgba(0,0,0,.08);
+    --shadow-hover: 0 20px 45px rgba(214,51,132,.18);
 }
 
 
@@ -38,11 +24,8 @@ FONTS
 ======================================================*/
 
 :root{
-
-    --heading-font:'Playfair Display', serif;
-
-    --body-font:'Poppins', sans-serif;
-
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'Poppins', sans-serif;
 }
 
 
@@ -51,9 +34,7 @@ TRANSITIONS
 ======================================================*/
 
 :root{
-
-    --transition:.35s ease;
-
+    --transition: .35s ease;
 }
 
 
@@ -62,13 +43,9 @@ BORDER RADIUS
 ======================================================*/
 
 :root{
-
-    --radius-small:12px;
-
-    --radius-medium:20px;
-
-    --radius-large:35px;
-
+    --radius-small: 12px;
+    --radius-medium: 20px;
+    --radius-large: 35px;
 }
 
 
@@ -77,7 +54,5 @@ SPACING
 ======================================================*/
 
 :root{
-
-    --section-padding:7rem;
-
+    --section-padding :7rem;
 }

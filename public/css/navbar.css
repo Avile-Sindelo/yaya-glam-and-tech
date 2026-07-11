@@ -3,25 +3,15 @@ NAVBAR
 ==================================================*/
 
 .navbar{
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    z-index:1000;
-
-    background:rgba(255,255,255,.72);
-
-    backdrop-filter:blur(14px);
-
-    border-bottom:1px solid rgba(255,255,255,.35);
-
-    transition:var(--transition);
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255,255,255,.72);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255,255,255,.35);
+    transition: var(--transition);
 }
 
 
@@ -30,15 +20,10 @@ CONTAINER
 ==================================================*/
 
 .navbar-container{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    height:90px;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
 }
 
 
@@ -47,77 +32,45 @@ LOGO
 ==================================================*/
 
 .logo{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:15px;
-
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 
 .logo-icon{
-
-    width:55px;
-
-    height:55px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    border-radius:50%;
-
-    background:linear-gradient(
-        135deg,
-        var(--soft-pink),
-        white
-    );
-
-    color:var(--primary);
-
-    font-size:1.8rem;
-
-    box-shadow:var(--shadow);
-
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--soft-pink), white);
+    color: var(--primary);
+    font-size: 1.8rem;
+    box-shadow: var(--shadow);
 }
 
 
 .logo-text{
-
-    display:flex;
-
-    flex-direction:column;
-
+    display: flex;
+    flex-direction: column;
 }
 
 
 .logo-title{
-
-    font-family:var(--heading-font);
-
-    color:var(--primary);
-
-    font-size:1.6rem;
-
-    line-height:1;
-
+    font-family: var(--heading-font);
+    color: var(--primary);
+    font-size: 1.6rem;
+    line-height: 1;
 }
 
 
 .logo-subtitle{
-
-    color:var(--gold);
-
-    font-size:.82rem;
-
-    letter-spacing:3px;
-
-    text-transform:uppercase;
-
+    color: var(--gold);
+    font-size: .82rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 
@@ -126,31 +79,21 @@ NAVIGATION
 ==================================================*/
 
 .nav-links{
-
-    display:flex;
-
-    gap:35px;
-
+    display: flex;
+    gap: 35px;
 }
 
 
 .nav-links li{
-
-    position:relative;
-
+    position: relative;
 }
 
 
 .nav-links a{
-
-    color:var(--black);
-
-    font-weight:500;
-
-    transition:var(--transition);
-
-    padding:5px;
-
+    color: var(--black);
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 5px;
 }
 
 
@@ -159,44 +102,29 @@ UNDERLINE ANIMATION
 ==================================================*/
 
 .nav-links a::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    bottom:-10px;
-
-    width:0;
-
-    height:2px;
-
-    background:var(--gold);
-
-    transition:.4s;
-
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: .4s;
 }
 
 
 .nav-links a:hover{
-
-    color:var(--primary);
-
+    color: var(--primary);
 }
 
 
 .nav-links a:hover::after{
-
-    width:100%;
-
+    width: 100%;
 }
 
 
 .active{
-
-    color:var(--primary) !important;
-
+    color: var(--primary) !important;
 }
 
 
@@ -205,9 +133,7 @@ BOOK BUTTON
 ==================================================*/
 
 .nav-btn{
-
-    padding:14px 30px;
-
+    padding: 14px 30px;
 }
 
 
@@ -216,9 +142,10 @@ SCROLL EFFECT
 ==================================================*/
 
 .navbar.scrolled{
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
 
-    background:white;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-
+@media (max-width: 600px) {
+    /* make a side(vertical) navigation bar  */
 }

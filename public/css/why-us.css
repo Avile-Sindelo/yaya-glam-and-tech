@@ -45,7 +45,7 @@
     line-height: 1.7;
 }
 
-.feature-card: hover .feature-icon{
+.feature-card:hover .feature-icon{
     transform: rotate(360deg) scale(1.1);
     transition: 1s ease;
 }
@@ -62,7 +62,6 @@
 
     .features-grid{
         grid-template-columns: 1fr;
-
     }
 
 }
