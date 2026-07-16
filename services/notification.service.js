@@ -1,7 +1,5 @@
-export async function sendBookingConfirmation(
-    booking
-) {
-
+export async function sendBookingConfirmation(booking) {
+    
     console.log(
         `
         Booking created for

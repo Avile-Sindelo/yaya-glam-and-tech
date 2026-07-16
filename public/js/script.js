@@ -1,8 +1,9 @@
 const errorElem = document.getElementsByClassName('error-message');
 
-console.log(errorElem[0].style);
+if(errorElem[0].textContent != ''){
 
-setTimeout(()=>{
-    errorElem[0].style.display = 'block';
-    console.log('LOG from the Timeout function')
-}, 5000);
+    setTimeout(()=>{
+        errorElem[0].style.visibility = 'hidden';
+    }, 5000);
+}
+
